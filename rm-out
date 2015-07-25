@@ -1,0 +1,13 @@
+#!/bin/bash
+
+find . -name out -type d
+
+echo "Continue?"
+select yn in Yes No; do
+    case $yn in
+        1 ) find . -name out -type d -exec rm -rf {} \; ;
+            break;;
+
+        * ) break;;
+    esac
+done

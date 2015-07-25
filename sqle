@@ -1,0 +1,2 @@
+#! /bin/bash
+ssh db2main@devdb1 "db2 ? sql$1" | less
